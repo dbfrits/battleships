@@ -137,14 +137,14 @@ namespace Battle_ships.Classes
                     int x = rand.Next(1, xsize + 1);
                     int y = rand.Next(1, ysize - ship.TargetSize + 1);
                     char yc = (char)(y + 64);
-                    string StarTarget = string.Concat(yc.ToString(), x);
+                    string StartTarget = string.Concat(yc.ToString(), x);
 
-                    if (freeTargets.Contains(StarTarget))
+                    if (freeTargets.Contains(StartTarget))
                     {
                         //We have a free Start Target, now lets check the rest
 
                         List<string> shipTargets = new List<string>();
-                        shipTargets.Add(StarTarget);
+                        shipTargets.Add(StartTarget);
 
                         bool Blocked = false;
                         for (int i = y + 1; i < y + ship.TargetSize; i++)
